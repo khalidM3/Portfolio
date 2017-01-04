@@ -23,3 +23,23 @@ main p {
   height: 100%;
   width: 100%;
 }
+.proj article {
+  text-align: center;
+  margin: auto;
+  color: white;
+  padding: 10px;
+  width: 60%;
+  height: 650px;
+}
+.article {
+  background-color: yellow;
+  width: 100%;
+}
+.about article{
+  text-align: center;
+  margin: auto;
+  color: white;
+  padding: 10px;
+  width: 60%;
+  height: 650px;
+}
