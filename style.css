@@ -11,10 +11,6 @@ main {
   height: 670px;
   background-color: lightblue;
 }
-main h1 {
-  font-size: 50px;
-  font-family: Verdana, sans-serif;;
-}
 main p {
   font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -31,15 +27,26 @@ main p {
   width: 60%;
   height: 650px;
 }
-.article {
-  background-color: yellow;
+.about {
+  background-color: red;
   width: 100%;
 }
-.about article{
+.aboutarticle{
   text-align: center;
   margin: auto;
   color: white;
   padding: 10px;
   width: 60%;
   height: 650px;
+}
+.title {
+  font-size: 60px;
+  border: 1px solid black;
+}
+.description {
+  border: 1px solid black;
+}
+.link {
+  width: 80%;
+  background-color: darkgreen;
 }
