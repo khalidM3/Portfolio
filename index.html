@@ -2,36 +2,47 @@
 <html>
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
     <title>Khalid Mohamud's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  </head>
+
+    <script id="project-template" type="text/x-handlebars-template">
+      <li id="projectHolder" class="slide" style='{{style}}'>
+      <h1>{{title}}</h1>
+      {{{description}}}
+      <h3>{{publishedOn}}</h3>
+      <button>{{{projectUrl}}}</button>
+    </li>
+    </script>
+    
+    </head>
   <body>
-    <main>
-      <section class="mainHome">
-        <h1 class="title">Hi,<br> I am khalid Mohamud,</h1>
-        <p class="description">welcome to my portfolio</p>
-        <a href="#proj"> <button>See Next</button> </a>
+
+    <main id="slider">
+      <ul id="eG" class="slides">
+
+      </ul>
+      <section id="last_page">
+        <h1>About me</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </section>
+
+      <!-- <section id="dotholder">
+        <div class="dots"href="#"></div>
+        <div class="dots"href="#"></div>
+        <div class="dots"href="#"></div>
+      </section> -->
+
+
+
     </main>
-
-    <section id="proj"class="proj">
-      <article class="">
-      <h1 class="title">Project 1</h1>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <a href="#"><button class="link">GitHub</button></a>
-      </article>
-      <a href="#about"><button>See Next</button></a>
-    </section>
-
-    <section id="about"class="about">
-      <article class="aboutarticle">
-        <h1 class="title">About me</h1>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-    </section>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" charset="utf-8"></script>
+    <script src="data/content.json" charset="utf-8"></script>
+    <script src="scripts/renderData.js" charset="utf-8"></script>
+    <script src="scripts/app.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    PopulateProjects.fetchAll();
+    </script>
   </body>
 </html>
