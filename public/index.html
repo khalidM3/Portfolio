@@ -2,10 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="vendor/style/reset.css">
     <link rel="stylesheet" href="style/style.css">
     <title>Khalid Mohamud's Portfolio</title>
-
     <script id="project-template" type="text/x-handlebars-template">
       <li id="projectHolder" class="slide" style='{{style}}'>
       <h1>{{title}}</h1>
@@ -14,15 +13,20 @@
       <button>{{{projectUrl}}}</button>
     </li>
     </script>
-
     </head>
+
+
   <body>
+
 
     <main id="slider">
       <ul id="eG" class="slides">
-
+        <!-- this is where the Handlebars rendered info goes! -->
       </ul>
-      <section id="last_page">
+      </main>
+
+
+      <section id="about">
         <h1>About me</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </section>
@@ -35,14 +39,18 @@
 
 
 
-    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" charset="utf-8"></script>
+    <script src="/vendor/scripts/page.js" charset="utf-8"></script>
     <script src="data/content.json" charset="utf-8"></script>
-    <script src="scripts/renderData.js" charset="utf-8"></script>
-    <script src="scripts/app.js" charset="utf-8"></script>
-    <script type="text/javascript">
-    Projects.fetchAll();
-    </script>
+                            <!-- MODEL -->
+    <script src="scripts/model/projects.js" charset="utf-8"></script>
+                             <!-- VIEW -->
+    <script src="scripts/view/app.js" charset="utf-8"></script>
+                          <!-- CONTROLLER -->
+    <script src="scripts/controller/aboutController.js" charset="utf-8"></script>
+    <script src="scripts/controller/projectsController.js" charset="utf-8"></script>
+    <script src="scripts/controller/routes.js" charset="utf-8"></script>
+
   </body>
 </html>
