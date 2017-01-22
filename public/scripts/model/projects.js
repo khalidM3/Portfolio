@@ -11,7 +11,6 @@
     // Grab the template script
     var source = $('#project-template').html();
     // Compile the template
-    console.log(source);
     var comptemplate = Handlebars.compile(source);
     return comptemplate(this);
   };
