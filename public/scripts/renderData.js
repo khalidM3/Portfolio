@@ -31,7 +31,7 @@ PopulateProjects.fetchAll = function() {
     PopulateProjects.loadAll(info)
     PopulateProjects.makeIndexPage();
   } else {
-    var getinfo = $.getJSON('data/content.json', function(data) {
+    var getinfo = $.getJSON('/github/user/repos?type=owner', function(data) {
       localStorage.setItem('projData', JSON.stringify(data));
       PopulateProjects.loadAll(data);
       PopulateProjects.makeIndexPage();
