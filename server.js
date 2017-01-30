@@ -9,6 +9,9 @@ app.use(express.static('./public'));
 app.get('/', function(req, res) {
   res.sendFIle('index.html', {root: './public'})
 });
+app.get('/projects', function(req,res) {
+  res.sendFile('index.html', {root: './public'})
+})
 app.get('/about', function(req,res) {
   res.sendFile('index.html', {root: './public'})
 })

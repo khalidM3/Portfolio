@@ -1,0 +1,25 @@
+.nav-bar {
+  /*position: fixed;*/
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 40px;
+}
+.nav-bar ul li {
+  display: inline;
+  padding-left: 10%;
+  font-size: 20px;
+}
+#slider{
+  display: inline-block;
+  width: 100%;
+}
+.slide {
+  display: inline-block;
+  width: 100%;
+  height: 80px;
+  border: 1px solid black;
+  margin: 10px;
+}
