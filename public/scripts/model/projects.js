@@ -31,18 +31,25 @@
 //                 NOTE
 // gets all the info to make the projects from local storage or the data
   Projects.fetchAll = function() {
-    if(localStorage.projData) {
-      var info = JSON.parse(localStorage.projData);
-      Projects.loadAll(info)
-      Projects.makeIndexPage();
-    } else {
-      var getinfo = $.getJSON('data/content.json', function(data) {
-        localStorage.setItem('projData', JSON.stringify(data));
-        Projects.loadAll(data);
-        Projects.makeIndexPage();
-      })
-    }
+    $.get('/github/users/khalidM3/repos?type=owner')
+     .done(function(data) {
+       Projects.loadAll(data);
+       Projects.makeIndexPage();
+     })
   }
   module.Projects = Projects;
 
 })(window)
+
+// if(localStorage.projData) {
+//   var info = JSON.parse(localStorage.projData);
+//   Projects.loadAll(info)
+//   Projects.makeIndexPage();
+// } else {
+//    $.get('/github/users/khalidM3/repos?type=owner')
+//    .then(
+//     localStorage.setItem('projData', JSON.stringify(data));
+//     Projects.loadAll(data);
+//     Projects.makeIndexPage();
+//   )
+// }

@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/style/reset.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/test.css">
     <title>Khalid Mohamud's Portfolio</title>
     <script id="project-template" type="text/x-handlebars-template">
-      <li id="projectHolder" class="slide" style='{{style}}'>
-      <h1>{{title}}</h1>
+      <li id="projectHolder" class="slide" style="background-color: lightgreen;">
+      <h1>{{name}}</h1>
       {{{description}}}
       <h3>{{publishedOn}}</h3>
       <button>{{{projectUrl}}}</button>
@@ -17,16 +17,32 @@
 
 
   <body>
+    <header>
+
+    </header>
+    <nav class="nav-bar">
+      <ul>
+        <a href="/"><li>Home</li></a>
+        <a href="/projects"><li>Projects</li></a>
+        <a href="/about"><li>about</li></a>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <h1>HI IM KHALID MOHAMUD</h1>
+      <h3>wecome to my portfolio</h3>
+      <a href="/projects"><button type="button">checkout out my projects</button></a>
+    </section>
 
 
-    <main id="slider">
+    <main id="slider" style="background-color: yellow;">
       <ul id="eG" class="slides">
         <!-- this is where the Handlebars rendered info goes! -->
       </ul>
       </main>
 
 
-      <section id="about">
+      <section id="about" style="background-color: blue;">
         <h1>About me</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </section>
@@ -48,6 +64,7 @@
                              <!-- VIEW -->
     <script src="scripts/view/app.js" charset="utf-8"></script>
                           <!-- CONTROLLER -->
+    <script src="scripts/controller/homeController.js" charset="utf-8"></script>
     <script src="scripts/controller/aboutController.js" charset="utf-8"></script>
     <script src="scripts/controller/projectsController.js" charset="utf-8"></script>
     <script src="scripts/controller/routes.js" charset="utf-8"></script>

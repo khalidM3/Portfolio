@@ -6,6 +6,7 @@
   projectsController.render = () => {
     Projects.fetchAll();
     $('#slider').show();
+    $('#home').hide()
     $('#about').hide();
     console.log('projectsController working')
   }
