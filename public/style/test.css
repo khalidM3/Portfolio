@@ -1,7 +1,8 @@
 .nav-bar {
   /*position: fixed;*/
   display: inline-block;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+  border-bottom: 1px solid #8c1aff;
   background-color: black;
   color: white;
   width: 100%;
@@ -12,9 +13,15 @@
   padding-left: 10%;
   font-size: 20px;
 }
+a {
+  text-decoration: none;
+  color: #8c1aff;
+}
 #slider{
   display: inline-block;
+  background-color: #404040;
   width: 100%;
+  height: 100%;
 }
 .slide {
   display: inline-block;
@@ -22,4 +29,61 @@
   height: 80px;
   border: 1px solid black;
   margin: 10px;
+}
+#home {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  background-color: black;
+  color: #00ffff;
+  width: 100%;
+  height: 100%;
+}
+#home h1 {
+  font-size: 60px;
+}
+#home h2 {
+  font-size: 40px;
+}
+#home h3 {
+  font-size: 30px;
+}
+#home button {
+  width: 60%;
+  height: 30px;
+  margin-top: 20%;
+  color: #8c1aff;
+  background-color: black;
+  border: 1px solid #8c1aff;
+}
+#projectHolder {
+  /*border: 1px solid #8c1aff;*/
+  position: relative;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  letter-spacing: 2px;
+  height: 100px;
+}
+#projectHolder h1 {
+  font-size: 30px;
+  color: #00ffff;
+}
+
+#about {
+  display: inline-block;
+  position: absolute;
+  background-color: black;
+  color: #00ffff;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+#about h1 {
+  text-align: center;
+  font-size: 60px;
+}
+.container {
+  margin: 10%;
+  letter-spacing: 2px;
 }
