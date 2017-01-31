@@ -3,7 +3,7 @@
 (function(module){
 
   const aboutController = {};
-  aboutController.render = function(){
+  aboutController.render = () => {
     Projects.fetchAll();
     $('#about').show()
     $('#home').hide()

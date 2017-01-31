@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="style/test.css">
     <title>Khalid Mohamud's Portfolio</title>
     <script id="project-template" type="text/x-handlebars-template">
-      <a href="#">
+      <a href={{{html_url}}}>
       <li id="projectHolder" class="slide">
       <h1>{{name}}</h1>
       {{{description}}}
-      <h3>{{publishedOn}}</h3>
+      <br>
+      <br>
+      <h3>published on {{updated_at}}</h3>
     </li>
   </a>
     </script>
@@ -21,6 +23,7 @@
     <header>
 
     </header>
+
     <nav class="nav-bar">
       <ul>
         <a href="/"><li>Home</li></a>
